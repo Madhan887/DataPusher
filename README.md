@@ -72,7 +72,7 @@ A Django REST Framework project to manage accounts, destinations, and incoming d
 ## Installation & Run
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/Madhan887/DataPusher.git
 cd your-project
 python -m venv venv
 source venv/bin/activate
