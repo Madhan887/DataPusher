@@ -12,6 +12,8 @@ User = get_user_model()
 
 
 class RegisterView(generics.CreateAPIView):
+    authentication_classes = []
+    permission_classes = []
     serializer_class = UserSerializer
 
     def create(self, request, *args, **kwargs):
@@ -32,6 +34,7 @@ class RegisterView(generics.CreateAPIView):
 
 
 class LoginView(ObtainAuthToken):
+   
     def post(self, request, *args, **kwargs):
         response = super().post(request, *args, **kwargs)
         token = response.data.get('token')

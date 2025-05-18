@@ -54,7 +54,7 @@ A Django REST Framework project to manage accounts, destinations, and incoming d
 
 ### Incoming Data Handler
 
-- **POST /api/destinations/server/incoming_data/**  
+- **POST /api/server/incoming_data/**  
   Receive incoming data, create logs  
   Required Headers: `CL-X-TOKEN`, `CL-X-EVENT-ID`  
   Payload: JSON body  
@@ -79,3 +79,4 @@ source venv/bin/activate
 pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
+celery -A datapusher worker --loglevel=info --pool=threads

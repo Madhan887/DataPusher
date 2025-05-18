@@ -33,8 +33,7 @@ class DataHandlerView(APIView):
 
     @swagger_auto_schema(
         manual_parameters=[
-            openapi.Parameter('CL-X-TOKEN', openapi.IN_HEADER, type=openapi.TYPE_STRING, required=True),
-            openapi.Parameter('CL-X-EVENT-ID', openapi.IN_HEADER, type=openapi.TYPE_STRING, required=True)
+            openapi.Parameter('CL-X-TOKEN', openapi.IN_HEADER, type=openapi.TYPE_STRING, required=True)
         ],
         request_body=openapi.Schema(type=openapi.TYPE_OBJECT),
         responses={

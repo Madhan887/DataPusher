@@ -34,8 +34,7 @@ class DataHandlerViewTest(APITestCase):
             updated_by=self.user
         )
 
-        self.url = "/api/destinations/server/incoming_data/"
-        self.log_url = "/api/logs/"
+        self.url = "/api/server/incoming_data/"
 
     def test_successful_post(self):
         headers = {
