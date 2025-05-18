@@ -8,7 +8,7 @@ A Django REST Framework project to manage accounts, destinations, and incoming d
 - Manage accounts and assign roles (admin, normal)
 - Add destinations per account
 - Receive incoming data with headers, log, and dispatch to destinations
-- View logs with filters and pagination
+- View logs with filters
 
 ---
 
@@ -56,7 +56,7 @@ A Django REST Framework project to manage accounts, destinations, and incoming d
 
 - **POST /api/server/incoming_data/**  
   Receive incoming data, create logs  
-  Required Headers: `CL-X-TOKEN`, `CL-X-EVENT-ID`  
+  Required Headers: `CL-X-TOKEN` 
   Payload: JSON body  
   Auth: Yes
 
